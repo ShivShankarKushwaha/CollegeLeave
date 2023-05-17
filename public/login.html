@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="/logo.jpg" type="image/x-icon" />
+    <link rel="shortcut icon" href="https://upload.wikimedia.org/wikipedia/en/c/cf/Iiit-una-logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Ubuntu:ital,wght@1,400;1,500&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous" />
+    <link rel="stylesheet" href="college.css" />
+    <title>Indian Institute of Information Technology Una- Leave</title>
+    <style>
+    .sign input{
+    outline: none;
+    border: .2rem solid grey;
+    border-radius: 2rem;
+    width: 80%;
+    height: 4rem;
+    text-align: center;
+    font-size: 2rem;
+    color: darkblue;
+}
+.container{
+    display: flex;
+    width: 100%;
+    height: 65rem;
+    align-items: center;
+    justify-content: center;
+    margin-top: 8rem;
+}
+.leftsign{
+    border: .2rem solid grey;
+    height: 50rem;
+    width: 40%;
+    padding: 1rem;
+    border-bottom-left-radius: 1rem;
+    border-top-left-radius: 1rem;
+    border-right: 0rem;
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.4);
+    /* background-color: rgb(90, 98, 180); */
+    /* background-color: rgba(113, 119, 233, 0.1); */
+    transition: 2s;
+}
+.leftsign:hover{
+    transition: 2s;
+    /* background: linear-gradient(to bottom,rgb(190, 190, 88),green); */
+    background: rgba(113, 119, 233, 0.1);
+}
+.leftsign:active{
+    background: rgba(113, 119, 233, 0.1);
+    /* background: linear-gradient(to bottom,rgb(165, 165, 143),green); */
+}
+.sign h1{
+    font-size: 4rem;
+    text-align: center;
+    margin-top: 1rem;
+    margin-bottom: 4rem;
+    color: blue;
+}
+.sign div{
+    text-align: center;
+    width: 100%;
+    margin: 1rem 0rem;
+}
+.gender{
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    height: 5rem;
+    font-size: 1.3rem;
+    display: flex;
+    font-size: 2rem;
+    justify-content: center;
+}
+.gender span{
+    font-size: 2rem;
+    margin-left: 5rem;
+}
+.gender input{
+    cursor: pointer;
+    width: 2rem;
+    margin: 0.5rem;
+}
+#submit{
+    background-color: rgb(149, 207, 222);
+    margin-bottom: 1rem;
+}
+#reset{
+    background-color: rgb(217, 97, 97);
+}
+#reset:hover{
+    cursor: pointer;
+    color: white;
+    background: linear-gradient(to right,rgb(179, 35, 160),rgb(209, 30, 65));
+}
+#submit:hover{
+    cursor: pointer;
+    color: white;
+    background: linear-gradient(to right,rgb(172, 199, 213),rgb(166, 11, 222));
+    
+}
+.rightsign{
+    border: .2rem solid grey;
+    width: 40%;
+    height: 50rem;
+    padding: 1rem;
+    border-top-right-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.4);
+    /* background-color: rgb(101, 240, 101); */
+    /* background-color: rgba(17, 255, 0, 0.1); */
+    transition: 2s;
+
+}
+.rightsign:hover{
+    /* background: linear-gradient(to bottom,yellow,blue); */
+    background: rgba(17, 255, 0, 0.1);
+    transition: 2s;
+}
+.rightsign:active
+{
+    background: rgba(17, 255, 0, 0.1);
+
+}
+.rightsign h1{
+    text-align: center;
+    font-size: 4rem;
+    margin-top: 1rem;
+    color: red;
+}
+.rightsign h3{
+    text-align: center;
+    margin: 1rem 0rem;
+    margin-bottom: 5rem;
+    font-size: 1.5rem;
+}
+
+.login{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+.login input{
+    outline: none;
+    border: .2rem solid grey;
+    border-radius: 2rem;
+    width: 80%;
+    height: 5rem;
+    text-align: center;
+    font-size: 2rem;
+    color: darkblue;
+    margin-top: 4rem;
+}
+.login .submit input{
+    width: 10rem;
+    height: 5rem;
+    border-radius: 1rem;
+    border: 0rem;
+    background-color: white;
+    box-shadow: 2px 2px 5px grey;
+    font-size: 2.5rem; 
+}
+.login .submit a{
+    font-size: 1.5rem;
+    margin-left: 1rem;
+    color: red;
+}
+.login .submit a:active{
+    text-decoration: none;
+}
+.login .submit input:hover{
+    cursor: pointer;
+    width: 10.5rem;
+    height: 5.5rem;
+    /* background: linear-gradient(to top,red,green); */
+    color: black;
+    transition: 1s;
+    
+}
+.login .submit input:active{
+    background-color: green;
+    box-shadow: 2px 2px 2px grey;
+    /* background: linear-gradient(to right,rgb(255, 1, 1),green); */
+    transition: 2s;
+
+}
+@media((min-width:768px) and (max-width:1000px))
+{
+   .container
+    {
+        display: flex;
+        flex-direction: column;
+        width: 100vw;
+        margin-top: 60rem;
+    }   
+    .leftsign
+    {
+        width: 95vw;
+        margin: 3rem;
+        /* height: 90rem !important; */
+    }
+    .sign
+    {
+        height: 60rem;
+    }
+    .sign div
+    {
+        position: unset;
+        left: 2rem;
+    }
+    .rightsign
+    {
+        width: 95vw;
+        margin: 3rem;
+        margin-bottom: 40rem;
+    }
+}
+       
+    </style>
+</head>
+
+<body>
+    <nav class="new-nav">
+        <img src="https://upload.wikimedia.org/wikipedia/en/c/cf/Iiit-una-logo.png" alt="iiit una" />
+        <div class="name">
+            <h1>Indian Institute of Information Technology, Una</h1>
+            <h3>भारतीय सूचना प्रौद्योगिकी संस्थान, ऊना</h3>
+        </div>
+        </div>
+        <div class="new-nav-links">
+            <a href="/" class="nav-link">Home</a>
+            <a href="/about" class="nav-link">About Us</a>
+            <!-- <a href="/services" class="nav-link">Student's corner </a> -->
+            <div class="dropdown">
+                <button class="btn btn-info dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Student's corner
+                </button>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="/services">Leave form</a></li>
+                    <li><a class="dropdown-item" href="/status">Status of application</a></li>
+                </ul>
+            </div>
+            <a href="#footer" class="nav-link">Contact </a>
+            <a href="/logout" class="nav-link ">Logout</a>
+            <a href="/login" class="nav-link btn btn-primary" id="loginbtn">Login</a>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="leftsign">
+            <form action="/sign" class="sign" method="post" onsubmit="return checkpassword()">
+                <h1>Sign Up</h1>
+                <div class="name">
+                    <input type="text" name="name" placeholder="Enter Name" value="" required>
+                    <!-- <span>Name</span> -->
+                </div>
+                <div class="email">
+                    <input type="email" name="email" placeholder="Enter Email" value="" required>
+                    <!-- <span>Email</span> -->
+                </div>
+                <div class="password">
+                    <input type="text" name="password" placeholder="Enter Password" value="" required id="signpassword">
+                    <!-- <span>Enter Password</span> -->
+                </div>
+                <div class="cnfrm-password">
+                    <input type="password" name="cnfrm_password" placeholder="Confirm Passowrd" value="" required
+                        id="sign_cnfrm_password">
+                    <!-- <span>Confirm Password</span> -->
+                </div>
+                <div class="submit">
+                    <input type="submit" value="Submit" id="submit">
+                    <input type="reset" value="Reset" id="reset">
+                </div>
+    
+            </form>
+        </div>
+        <div class="rightsign">
+            <h1>Login</h1>
+            <h3>Login here to use services of iiitu leave</h3>
+            <form action="/login" class="login" method="post">
+                <div class="username">
+                    <input type="text" name="email" placeholder="Enter Registered Email" value="" required>
+                </div>
+                <div class="loginpass">
+                    <input type="password" name="password" placeholder="Enter Password" value="" required>
+                </div>
+                <div class="submit">
+    
+                    <input type="submit" value="Login">
+                    <a href="">Forget Password?</a>
+                </div>
+            </form>
+        </div>
+    </div>
+    
+    <footer id="footer">
+        <div class="content">
+            <div class="top">
+                <div class="logo-details">
+                    <span>INDIAN INSTITUTE OF INFORMATION TECHNOLOGY UNA</span>
+                </div>
+                <div class="media-icons">
+                    <a href="https://www.facebook.com/iiituna" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a href=""><i class="fa-solid fa-envelope"></i></a>
+                    <a href="https://instagram.com/iiituna_" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://linkedin.com/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            <div class="link-boxes">
+                <ul class="box">
+                    <li class="link_name">About</li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="reach.html">Facilities</a></li>
+                    <li><a href="#about-section">About us</a></li>
+                </ul>
+                <ul class="box">
+                    <li class="link_name">Quick Links</li>
+                    <li><a href="placement.html">Placement </a></li>
+                    <li><a href="campusl.html">Campus life</a></li>
+                    <li><a href="reach.html">How to Reach</a></li>
+                </ul>
+                <ul class="box">
+                    <li class="link_name">Student's Corner</li>
+                    <li><a href="complaint.html">Hostel Leave</a></li>
+                    <li><a href="academics.html">Academics Leave</a></li>
+                </ul>
+                <ul class="box-1">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3402.5655687846292!2d76.18850141440156!3d31.48113465622981!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391adb198180014f%3A0xbf76347093a3aa9a!2sIndian%20Institute%20of%20Information%20Technology%20(IIIT)%20Una!5e0!3m2!1sen!2sin!4v1667841204364!5m2!1sen!2sin"
+                        width="350" height="250" style="border: 0" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    </footer>
+    
+</body>
+<script src="script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+    integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"
+    integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD"
+    crossorigin="anonymous"></script>
+<script>
+    function checkpassword(e) {
+        let password = document.getElementById('signpassword').value;
+        let confirm = document.getElementById('sign_cnfrm_password').value;
+        if (password != confirm) {
+            alert('Password didnot match' + password, "  ", confirm);
+            return false;
+        }
+        else {
+            return true;
+        }
+    }
+</script>
+</html>

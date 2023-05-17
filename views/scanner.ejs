@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="college.css" />
+    <title>Indian Institute of Information Technology Una- Leave</title>
+    <script src="https://rawgit.com/schmich/instascan-builds/master/instascan.min.js"></script>
+    <style>
+        #video
+        {
+            display: flex;
+            justify-content: center;
+            margin: auto;
+        }
+        h2
+        {
+            margin-top: 4rem;
+        }
+    </style>
+</head>
+
+<body>
+    <center><h2>Scan Qrcode here</h2></center>
+    <video id="video" width="640" height="480" autoplay></video>
+ 
+
+</body>
+    <script>
+        
+        let scanner = new Instascan.Scanner({ video: document.getElementById('video') });
+        scanner.addListener('scan', function (content) {
+            console.log('QR Code content: ', content);
+            const option = {
+                method: 'POST',
+                body: new URLSearchParams({ content: content })
+            };
+            fetch('/scanneddata', option)
+                .then(responce => responce.json())
+                .then(result => {
+                    console.log(result);
+                    let container = document.getElementById('video');
+                    container.outerHTML=`<center><h1>${result}</h1></center>`;
+                })
+                .catch(err => { throw err })
+        });
+
+        // Start camera and scanning
+        Instascan.Camera.getCameras().then(function (cameras) {
+            if (cameras.length > 0) {
+                scanner.start(cameras[0]);  // Use the first available camera
+            } else {
+                console.error('No cameras found on the device.');
+            }
+        }).catch(function (err) {
+            console.error(err);
+        });
+        navigator.mediaDevices.getUserMedia({ video: true }).then(function (stream) {
+                scanner.start(stream);
+            }).catch(function (err) {
+                console.error(err);
+            });
+    </script>
+
+</html>

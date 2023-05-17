@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="https://upload.wikimedia.org/wikipedia/en/c/cf/Iiit-una-logo.png"
+        type="image/x-icon">
+    <link rel="shortcut icon" href="/logo.jpg" type="image/x-icon" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Ubuntu:ital,wght@1,400;1,500&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous" />
+    <link rel="stylesheet" href="college.css" />
+    <title>Indian Institute of Information Technology Una- Leave</title>
+    <style>
+        section {
+            width: 90vw;
+            height: 80vh;
+            margin: auto;
+            /* border: .2rem solid red; */
+            margin-top: 12rem;
+            padding-top: 5rem;
+        }
+
+        .studentdata {
+            width: 70%;
+            /* border: .1rem solid red; */
+            margin: auto;
+        }
+
+
+        table {
+            width: 100%;
+            margin: auto;
+            /* text-align: center; */
+            font-size: 1.7rem;
+            /* border: .1rem solid grey; */
+        }
+
+        table tbody tr {
+            height: 3rem;
+        }
+
+        .approvebutton {
+            /* border: .1rem solid red; */
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .approvebutton input {
+            margin-right: 10.2rem;
+            width: 2rem;
+            height: 2rem;
+            margin-top: 0.5rem;
+        }
+
+        .approvebutton label {
+            margin: .2rem;
+            margin: 2rem;
+        }
+
+        #submitapproval {
+            font-size: 2.0rem;
+            padding: 0.5rem;
+            border: none;
+            background-color: rgb(33, 33, 192);
+            color: white;
+            margin-left: 45%;
+        }
+        @media((min-width:1000px) and (max-width:1440px))
+        {
+            footer
+            {
+                margin-top: 10rem;
+            }
+        }
+        @media((min-width: 768px) and (max-width:1000px))
+        {
+            footer
+            {
+                margin-top: 10rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <nav class="new-nav">
+        <img src="https://upload.wikimedia.org/wikipedia/en/c/cf/Iiit-una-logo.png" alt="iiit una" />
+        <div class="name">
+            <h1>Indian Institute of Information Technology, Una</h1>
+            <h3>भारतीय सूचना प्रौद्योगिकी संस्थान, ऊना</h3>
+        </div>
+        </div>
+        <div class="new-nav-links">
+            <a href="/" class="nav-link">Home</a>
+            <a href="/about" class="nav-link">About Us</a>
+            <!-- <a href="/services" class="nav-link">Student's corner </a> -->
+            <div class="dropdown">
+                <button class="btn btn-info dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                    Student's corner
+                </button>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="/services">Leave form</a></li>
+                    <li><a class="dropdown-item" href="/status">Status of application</a></li>
+                </ul>
+            </div>
+            <a href="#footer" class="nav-link">Contact </a>
+            <a href="/logout" class="nav-link ">Logout</a>
+            <a href="/login" class="nav-link btn btn-primary" id="loginbtn">Login</a>
+        </div>
+    </nav>
+
+    <section>
+        <div class="studentdata">
+            <table>
+                <thead>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Name</td>
+                        <td>
+                            <%=data.name%>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Email</td>
+                        <td>
+                            <%=data.email%>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Reason</td>
+                        <td>
+                            <%=data.reason%>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Leave start date</td>
+                        <td>
+                            <%=data.leaveStartDate%>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Leave end date</td>
+                        <td>
+                            <%=data.leaveEndDate%>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Application submission date</td>
+                        <td>
+                            <%=data.Uploadedon%>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Application form name</td>
+                        <td>
+                            <%=data.filename%>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Status</td>
+                        <td>
+                            <%=data.status%>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Exit?</td>
+                        <td>
+                            <%=data.exit%>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Entry?</td>
+                        <td>
+                            <%=data.entry%>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <hr>
+            <center>
+                <h2 id="porpose"></h2>
+                <img id="qrcode" src=<%=data.qrcode %> alt="Qrcode" >
+            </center>
+
+        </div>
+    </section>
+
+    <footer id="footer">
+        <div class="content">
+            <div class="top">
+                <div class="logo-details">
+                    <span>INDIAN INSTITUTE OF INFORMATION TECHNOLOGY UNA</span>
+                </div>
+                <div class="media-icons">
+                    <a href="https://www.facebook.com/iiituna" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=21331@iiitu.ac.in" target="_blank"><i
+                            class="fa-solid fa-envelope"></i></a>
+                    <a href="https://instagram.com/iiituna_" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://linkedin.com/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            <div class="link-boxes">
+                <ul class="box">
+                    <li class="link_name">About</li>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/services">Facilities</a></li>
+                    <li><a href="/about">About us</a></li>
+                </ul>
+                <ul class="box">
+                    <li class="link_name">Quick Links</li>
+                    <li><a href="placement.html">Placement </a></li>
+                    <li><a href="campusl.html">Campus life</a></li>
+                    <li><a href="reach.html">How to Reach</a></li>
+                </ul>
+                <ul class="box">
+                    <li class="link_name">Student's Corner</li>
+                    <li><a href="complaint.html">Hostel Leave</a></li>
+                    <li><a href="academics.html">Academics Leave</a></li>
+                </ul>
+                <ul class="box-1">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3402.5655687846292!2d76.18850141440156!3d31.48113465622981!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391adb198180014f%3A0xbf76347093a3aa9a!2sIndian%20Institute%20of%20Information%20Technology%20(IIIT)%20Una!5e0!3m2!1sen!2sin!4v1667841204364!5m2!1sen!2sin"
+                        width="350" height="250" style="border: 0" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </ul>
+            </div>
+        </div>
+    </footer>
+</body>
+<script>
+    let porpose = `<%=data.exit%>`;
+    let status = `<%=data.status%>`;
+    let field = document.getElementById('porpose');
+    if(status!='null')
+    {
+        if(porpose!='null')
+        {
+            field.innerText='Entry qrcode';
+        }
+        else
+        {
+            field.innerText='Exit qrcode';
+        }
+    }
+</script>
+<script src="script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+    integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"
+    integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD"
+    crossorigin="anonymous"></script>
+
+</html>

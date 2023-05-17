@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="/logo.jpg" type="image/x-icon">
+  <link rel="shortcut icon" href="https://upload.wikimedia.org/wikipedia/en/c/cf/Iiit-una-logo.png" type="image/x-icon">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Ubuntu:ital,wght@1,400;1,500&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+  <link rel="stylesheet" href="college.css">
+
+  <title>Indian Institute of Information Technology Una- Leave</title>
+  <style>
+    /* otp */
+    form h2
+    {
+      /* font-size: 5rem; */
+      font-weight: 900;
+    }
+    form a
+    {
+      font-size: 2rem;
+    }
+    .signotpbox {
+      width: 100vw;
+      height: 80vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 10rem;
+      background-color: #fafafa;
+    }
+
+    .signotpbox form {
+      /* border: .2rem solid black; */
+      width: 43%;
+      height: 40rem;
+      display: flex;
+      text-align: center;
+      flex-direction: column;
+
+      /* justify-content: center; */
+      align-items: center;
+      /* background: rgb(180, 179, 179); */
+      padding: 10rem;
+      justify-content: space-between;
+    }
+
+    #signotp {
+      width: 50%;
+      height: 3rem;
+      padding: 2rem;
+      font-size: 2rem;
+      outline-color: brown;
+    }
+
+    #signsubmit {
+      font-size: 2rem;
+      /* background-color: #ffffffba; */
+      font-style: italic;
+      border-radius: 20px;
+      padding: .51rem;
+    }
+
+    #signsubmit:hover {
+      background-color: #fff;
+    }
+
+    .animation {
+      height: 100px;
+    }
+  </style>
+</head>
+
+<body>
+  <nav class="new-nav">
+    <img src="https://upload.wikimedia.org/wikipedia/en/c/cf/Iiit-una-logo.png" alt="iiit una" />
+    <div class="name">
+      <h1>Indian Institute of Information Technology, Una</h1>
+      <h3>भारतीय सूचना प्रौद्योगिकी संस्थान, ऊना</h3>
+    </div>
+    <div class="new-nav-links">
+      <a href="/" class="nav-link">Home</a>
+      <a href="/about" class="nav-link">About Us</a>
+      <!-- <a href="/services" class="nav-link">Student's corner </a> -->
+      <div class="dropdown">
+        <button class="btn btn-info dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+          Student's corner
+        </button>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="/services">Leave form</a></li>
+          <li><a class="dropdown-item" href="/status">Status of application</a></li>
+        </ul>
+      </div>
+      <a href="#footer" class="nav-link">Contact </a>
+      <a href="/logout" class="nav-link ">Logout</a>
+      <a href="/login" class="nav-link btn btn-primary" id="loginbtn">Login</a>
+    </div>
+  </nav>
+
+  <div class="signotpbox">
+    <div class="animation">
+      <iframe src="https://lottie.host/?file=9a9e23d5-392b-4141-8aff-435e52832163/LVF97Ws4qN.json"
+        style="align-items: center;"></iframe>
+    </div>
+    <form action="/signotp" method="post">
+    <!-- <form> -->
+      <h2>Enter Sent Otp</h2>
+      <input type="text" name="otp" id="signotp" value="">
+      <a href="">resend otp</a>
+      <input type="submit" value="Validate" id="signsubmit">
+    </form>
+  </div>
+  <footer id="footer">
+    <div class="content">
+      <div class="top">
+        <div class="logo-details">
+          <span>INDIAN INSTITUTE OF INFORMATION TECHNOLOGY UNA</span>
+        </div>
+        <div class="media-icons">
+          <a href="https://www.facebook.com/iiituna" target="_blank"><i class="fab fa-facebook-f"></i></a>
+          <a href=""><i class="fa-solid fa-envelope"></i></a>
+          <a href="https://instagram.com/iiituna_" target="_blank"><i class="fab fa-instagram"></i></a>
+          <a href="https://linkedin.com/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+      </div>
+      <div class="link-boxes">
+        <ul class="box">
+          <li class="link_name">About</li>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="reach.html">Facilities</a></li>
+          <li><a href="#about-section">About us</a></li>
+        </ul>
+        <ul class="box">
+          <li class="link_name">Quick Links</li>
+          <li><a href="placement.html">Placement </a></li>
+          <li><a href="campusl.html">Campus life</a></li>
+          <li><a href="reach.html">How to Reach</a></li>
+        </ul>
+        <ul class="box">
+          <li class="link_name">Student's Corner</li>
+          <li><a href="complaint.html">Hostel Leave</a></li>
+          <li><a href="academics.html">Academics Leave</a></li>
+        </ul>
+        <ul class="box-1">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3402.5655687846292!2d76.18850141440156!3d31.48113465622981!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391adb198180014f%3A0xbf76347093a3aa9a!2sIndian%20Institute%20of%20Information%20Technology%20(IIIT)%20Una!5e0!3m2!1sen!2sin!4v1667841204364!5m2!1sen!2sin"
+            width="350" height="250" style="border: 0" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </ul>
+      </div>
+    </div>
+  </footer>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+  integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"
+  integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD" crossorigin="anonymous"></script>
+  <script src="script.js"></script>
+</html>
