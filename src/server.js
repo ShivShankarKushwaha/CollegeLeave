@@ -262,21 +262,22 @@ app.post("/sign", async (req, res) => {
         console.log('generated and saved pin is:',req.session.pinReturn);
         var mailoption = {
             from: process.env.MAIL_FROM,
-            to: process.env.MAIL_FROM,
-            subject: "IIITU library management sign up otp password ",
+            to: req.body.email,
+            subject: "IIITU Leave  sign up otp password ",
             text: "Your Pin is:",
             html: `<h3>Your pin is:</h3><h1>${pinReturn}</h1>`
         };
 
         transporter.sendMail(mailoption, function (err, info) {
             if (err) {
-                console.log(err);
+                console.log('error is sign up'+err);
+                res.redirect("/login");
             }
             else {
                 console.log('Email has been sent');
+                res.redirect("/otppage");
             }
         })
-        res.redirect("/otppage");
     }
 })
 app.get("/otppage", async (req, res) => 

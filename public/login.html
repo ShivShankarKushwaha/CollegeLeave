@@ -225,7 +225,55 @@
         margin-bottom: 40rem;
     }
 }
-       
+@media((min-width:550px) and (max-width:768px))
+{
+    .container
+    {
+        display: flex;
+        flex-direction: column;
+        width: 100vw;
+        margin-top: 25rem;
+    }  
+    nav{
+        width: 100vw;
+    }
+    .new-nav-links
+    {
+        /* border: .2rem solid red; */
+        width: 100vw;
+        justify-content: center;
+    }
+    .leftsign
+    {
+        width: 100vw;
+        padding-top: 5rem;
+    }
+    .rightsign
+    {
+        width: 100vw;
+        /* height: 200rem; */
+        /* margin: 5rem 0; */
+    }
+    .sign h1
+    {
+        margin: 0%;
+        padding: 0;
+    }
+    #footer
+    {
+        margin-top: 20rem;
+    }
+    .new-nav-links a
+            {
+                font-size: 1.3rem !important;
+            }
+            #loginbtn,.nav-link .btn .btn-primary
+            {
+                font-size: 1rem;
+                padding: 1rem ;
+                height: 4rem;
+            }
+}     
     </style>
 </head>
 
@@ -259,7 +307,7 @@
         <div class="leftsign">
             <form action="/sign" class="sign" method="post" onsubmit="return checkpassword()">
                 <h1>Sign Up</h1>
-                <div class="name">
+                <div >
                     <input type="text" name="name" placeholder="Enter Name" value="" required>
                     <!-- <span>Name</span> -->
                 </div>

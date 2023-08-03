@@ -249,7 +249,7 @@ app.post("/sign",async(req,res)=>{
             PinGenerator();
             var mailoption = {
                 from: process.env.MAIL_FROM,
-                to: process.env.MAIL_FROM,
+                to: "21331@iiitu.ac.in",
                 subject: "IIITU library management sign up otp password ",
                 text: "Your Pin is:",
                 html: `<h3>Your pin is:</h3><h1>${pinReturn}</h1>`
@@ -257,6 +257,7 @@ app.post("/sign",async(req,res)=>{
 
             transporter.sendMail(mailoption, function (err, info) {
                 if (err) {
+                    console.log(process.env.MAIL_PASS);
                     console.log(err);
                 }
                 else {
