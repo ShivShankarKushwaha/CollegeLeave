@@ -9,7 +9,7 @@ const nodemailer = require('nodemailer');
 const otpGenerator = require('otp-generator');
 const { response } = require('express');
 const { MongoClient, ObjectId } = require('mongodb');
-const url = 'mongodb://127.0.0.1:27017';
+const url = process.env.MONGO_LINK;
 const client = new MongoClient(url);
 const session = require('express-session');
 const cookieparser = require('cookie-parser');
@@ -28,7 +28,7 @@ app.set('views', viewspath);
 
 
 app.use(session({
-    secret: 'secret_key',
+    secret: process.env.SECRET_KEY,
     resave: false,
     saveUninitialized: false,
     cookie: {

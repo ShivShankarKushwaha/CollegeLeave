@@ -1,6 +1,7 @@
+require('dotenv').config();
 const mongoose = require('mongoose');
 const bcrypt = require('bcrypt');
-mongoose.connect('mongodb://127.0.0.1:27017/Practicum4',
+mongoose.connect(process.env.MONGO_LINK,
 {
     useNewUrlParser: true,
     useUnifiedTopology: true,
